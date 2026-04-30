@@ -8,6 +8,7 @@ import requests
 from datetime import datetime
 
 app = Flask(__name__)
+
 CORS(app, origins=[
     "http://localhost:8080",
     "http://localhost:8082",
