@@ -1,14 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { AuthForm } from "@/components/AuthForm";
+import { CustomerDashboard } from "@/components/CustomerDashboard";
+import { AdminDashboard } from "@/components/AdminDashboard";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
+  const [user, setUser] = useState<{type: 'customer' | 'admin'} | null>(null);
+
+  const handleAuthSuccess = (userType: 'customer' | 'admin') => {
+    setUser({ type: userType });
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+  };
+
+  if (!user) {
+    return <AuthForm onAuthSuccess={handleAuthSuccess} />;
+  }
+
+  if (user.type === 'customer') {
+    return <CustomerDashboard onLogout={handleLogout} />;
+  }
+
+  return <AdminDashboard onLogout={handleLogout} />;
 };
 
 export default Index;

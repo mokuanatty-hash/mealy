@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				appetizing: 'hsl(var(--appetizing))',
+				fresh: 'hsl(var(--fresh))',
+				warm: 'hsl(var(--warm))',
+				spice: 'hsl(var(--spice))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

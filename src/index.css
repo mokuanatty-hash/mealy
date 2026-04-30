@@ -8,26 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 40 20% 97%;
+    --foreground: 20 14% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 14% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 14% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 85% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 20 14% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 15% 90%;
+    --muted-foreground: 20 8% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Food-focused colors */
+    --appetizing: 25 85% 55%;
+    --fresh: 120 40% 50%;
+    --warm: 35 80% 60%;
+    --spice: 15 75% 50%;
+    
+    /* Gradients */
+    --gradient-appetizing: linear-gradient(135deg, hsl(25 85% 55%), hsl(35 80% 60%));
+    --gradient-fresh: linear-gradient(135deg, hsl(120 40% 50%), hsl(140 45% 55%));
+    --gradient-warm: linear-gradient(135deg, hsl(35 80% 60%), hsl(45 75% 65%));
+    
+    /* Shadows */
+    --shadow-appetizing: 0 4px 20px hsl(25 85% 55% / 0.15);
+    --shadow-card: 0 2px 10px hsl(20 14% 15% / 0.08);
+    --shadow-elevated: 0 8px 30px hsl(20 14% 15% / 0.12);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
