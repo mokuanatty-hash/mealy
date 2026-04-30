@@ -164,7 +164,7 @@ export function CustomerDashboard({ onLogout }: CustomerDashboardProps) {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-appetizing">
-                      ${meal.price}
+                      Ksh {meal.price}
                     </div>
                   </div>
                 </div>

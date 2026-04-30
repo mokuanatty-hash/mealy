@@ -143,7 +143,7 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Today's Revenue</p>
-                  <p className="text-2xl font-bold text-appetizing">${totalRevenue.toFixed(2)}</p>
+                  <p className="text-2xl font-bold text-appetizing">Ksh {totalRevenue.toFixed(2)}</p>
                 </div>
               </div>
             </CardContent>
@@ -262,7 +262,7 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
                         <div className="flex items-center space-x-3 mb-2">
                           <h3 className="font-medium">{meal.name}</h3>
                           <Badge variant="outline">{meal.category}</Badge>
-                          <span className="text-lg font-bold text-appetizing">${meal.price}</span>
+                          <span className="text-lg font-bold text-appetizing">Ksh {meal.price}</span>
                         </div>
                         <p className="text-sm text-muted-foreground">{meal.description}</p>
                       </div>
@@ -303,7 +303,7 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
                         <p className="text-sm text-muted-foreground">{order.meal}</p>
                       </div>
                       <div className="text-right">
-                        <p className="font-bold text-appetizing">${order.price}</p>
+                        <p className="font-bold text-appetizing">Ksh {order.price}</p>
                         <p className="text-sm text-muted-foreground">{order.time}</p>
                       </div>
                     </div>
@@ -312,7 +312,7 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
                 <div className="mt-6 pt-6 border-t">
                   <div className="flex justify-between items-center">
                     <span className="text-lg font-medium">Total Revenue:</span>
-                    <span className="text-2xl font-bold text-appetizing">${totalRevenue.toFixed(2)}</span>
+                    <span className="text-2xl font-bold text-appetizing">Ksh {totalRevenue.toFixed(2)}</span>
                   </div>
                 </div>
               </CardContent>
