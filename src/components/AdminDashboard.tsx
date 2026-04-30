@@ -66,12 +66,14 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
     price: "",
     category: ""
   });
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/meals").then(res => setMeals(res.data));
+    axios.get("http://localhost:5000/api/orders").then(res => setOrders(res.data));
   }, []);
 
-  const totalRevenue = todaysOrders.reduce((sum, order) => sum + order.price, 0);
+  const totalRevenue = orders.reduce((sum, order) => sum + order.price, 0);
 
   const handleAddMeal = async () => {
     if (!newMeal.name || !newMeal.price) {
@@ -305,11 +307,14 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {todaysOrders.map((order) => (
+                  {orders.map((order: any) => (
                     <div key={order.id} className="flex items-center justify-between p-4 border rounded-lg">
                       <div>
                         <h3 className="font-medium">{order.customerName}</h3>
                         <p className="text-sm text-muted-foreground">{order.meal}</p>
+                        {order.delivery_date && order.delivery_time && (
+                          <p className="text-xs text-muted-foreground">Delivery: {order.delivery_date} at {order.delivery_time}</p>
+                        )}
                       </div>
                       <div className="text-right">
                         <p className="font-bold text-appetizing">Ksh {order.price}</p>

@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import time
+import os
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -50,12 +52,24 @@ meals = [
     }
 ]
 
-orders = [
-    {"id": 1, "customerName": "John Doe", "meal": "Grilled Chicken Bowl", "price": 15.99, "time": "12:30 PM"},
-    {"id": 2, "customerName": "Jane Smith", "meal": "Mediterranean Salmon", "price": 18.99, "time": "12:35 PM"},
-    {"id": 3, "customerName": "Mike Johnson", "meal": "Veggie Power Bowl", "price": 13.99, "time": "12:40 PM"},
-    {"id": 4, "customerName": "Sarah Wilson", "meal": "Grilled Chicken Bowl", "price": 15.99, "time": "12:45 PM"},
-]
+ORDERS_FILE = os.path.join(os.path.dirname(__file__), 'orders.json')
+
+def load_orders():
+    if os.path.exists(ORDERS_FILE):
+        with open(ORDERS_FILE, 'r') as f:
+            return json.load(f)
+    return [
+        {"id": 1, "customerName": "John Doe", "meal": "Grilled Chicken Bowl", "price": 15.99, "time": "12:30 PM"},
+        {"id": 2, "customerName": "Jane Smith", "meal": "Mediterranean Salmon", "price": 18.99, "time": "12:35 PM"},
+        {"id": 3, "customerName": "Mike Johnson", "meal": "Veggie Power Bowl", "price": 13.99, "time": "12:40 PM"},
+        {"id": 4, "customerName": "Sarah Wilson", "meal": "Grilled Chicken Bowl", "price": 15.99, "time": "12:45 PM"},
+    ]
+
+def save_orders():
+    with open(ORDERS_FILE, 'w') as f:
+        json.dump(orders, f, indent=2)
+
+orders = load_orders()
 
 @app.route("/api/signup", methods=["POST"])
 def signup():
@@ -130,6 +144,7 @@ def add_order():
         "delivery_date": data.get("delivery_date")
     }
     orders.append(order)
+    save_orders()
     return jsonify(order), 201
 
 @app.route("/api/admin/orders", methods=["GET"])

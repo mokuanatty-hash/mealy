@@ -71,3 +71,17 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Order Management & Persistence
+
+- All orders placed by customers are saved and shown in the admin dashboard under "Today's Orders".
+- Orders include all details: customer name, meal, price, time, delivery date, and delivery time.
+- Orders are now persistent: they are saved in a file (`backend/orders.json`) and will not be lost when the backend restarts.
+
+## Project Team & Responsibilities
+
+- **Laetitia Kamangu** (Scrum Master): Project management, sprint planning, and team coordination
+- **Lawrence Wambugu**: Frontend development (React, UI/UX, customer dashboard)
+- **Andrew Tobiko**: Backend development (Flask API, authentication, order persistence)
+- **George Mbugua**: Admin dashboard, order management, and integration
+- **Lee Thuku**: Testing, documentation, and deployment
