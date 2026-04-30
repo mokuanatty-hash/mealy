@@ -195,11 +195,11 @@ If you still have issues, let me know what you see in the Network tab after tryi
 ---
 
 **Reference:**  
-- [https://mealy-steel.vercel.app/](https://mealy-steel.vercel.app/)
+- [https://mealy-steel.vercel.app/]([(https://mealy-464v.vercel.app/))
 
 ---
 
-To fix the login issue on your deployed frontend ([https://mealy-steel.vercel.app/](https://mealy-steel.vercel.app/)), follow these steps:
+To fix the login issue on your deployed frontend ([https://mealy-464v.vercel.app//)), follow these steps:
 
 ---
 
@@ -269,7 +269,7 @@ If you still have issues, let me know what you see in the Network tab after tryi
 ---
 
 **Reference:**  
-- [https://mealy-steel.vercel.app/](https://mealy-steel.vercel.app/)
+- (https://mealy-464v.vercel.app/)/)
 
 Absolutely! Here’s exactly how to fix your deployed login issue step by step:
 
@@ -319,7 +319,7 @@ Then redeploy or restart your backend.
 ## 4. **Redeploy Both Frontend and Backend**
 
 - After making these changes, redeploy your backend and frontend.
-- Try logging in again at [https://mealy-steel.vercel.app/](https://mealy-steel.vercel.app/).
+- Try logging in again at [https://mealy-steel.vercel.app/]([https://mealy-464v.vercel.app/]).
 
 ---
 
