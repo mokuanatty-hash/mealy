@@ -25,7 +25,7 @@ interface AdminDashboardProps {
   onLogout: () => void;
 }
 
-// Mock data
+// Mock 
 const initialMeals = [
   {
     id: 1,
