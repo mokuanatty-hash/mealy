@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app, origins=[
     "http://localhost:8080",
     "http://localhost:8082",
-    "https://mealy-ogui.vercel.app"
+    "https://mealy-464v.vercel.app"
 ])
 
 # In-memory data for demo   
